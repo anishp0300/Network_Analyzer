@@ -14,7 +14,8 @@ README
 included: 
 All code files (Android Studio Project (zip file), install.sh, sync.sh, build_sdk.sh, glass.png, xml files to app layout, AndroidManifest.xml, MainAcitivity.java, Analyze.java) 
 This README:
-Steps to build your choice of AOSP build, build your SDK and execute the code in Android Studio and install the Network Analyzer on your phone, that keeps a track of received and transmitted Kb per 3 seconds. The app will also provide an option to check if the phone is connected to network or not. You will be able to download this log into a text file locally on your phone. 
+Steps to build your choice of AOSP build, build your SDK and execute the code in Android Studio and install the Network Analyzer on your phone, that logs network usage into a file. Used a 3-second intervals. E.g., if 1.2 MB
+was downloaded in the last 3 seconds, log the system time and usage.
 
 PATH- <Your_Device_Name>/Internal shared storage/Documents/Sent_Received_Data.txt
 adb command- adb shell cat /storage/emulated/0/Documents/Sent_Received_Data.txt (or your custom path)
