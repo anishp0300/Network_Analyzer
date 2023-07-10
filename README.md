@@ -12,7 +12,7 @@ Phone- Pixel 5a (5G)
 README
 
 included: 
-All code files (Android Studio Project (zip file), install.sh, sync.sh, build_sdk.sh, glass.png, xml files to app layout, MainAcitivity.java, Analyze.java) 
+All code files (Android Studio Project (zip file), install.sh, sync.sh, build_sdk.sh, glass.png, xml files to app layout, AndroidManifest.xml, MainAcitivity.java, Analyze.java) 
 This README:
 Steps to build your choice of AOSP build, build your SDK and execute the code in Android Studio and install the Network Analyzer on your phone, that keeps a track of received and transmitted Kb per 3 seconds. The app will also provide an option to check if the phone is connected to network or not. You will be able to download this log into a text file locally on your phone. 
 
