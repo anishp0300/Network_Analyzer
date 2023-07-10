@@ -41,7 +41,15 @@ ________________________________________________________________________________
 We now get to Android Studio. To build the SDK, you need to install some binaries. You can use 'build_sdk.sh' script to build the SDK. The credits for this script, go to Kevin Ossia.
 __________________________________________________________________________________________________________________________________________________________________________________________________________
 
-Open this project in your Android Studio after setting up the right SDK. Also included is 'glass.png'. This is the app icon. Thats it! You can make your own modifications to the code if you want. There are several methods to perform this activity.
+Open this project in your Android Studio after setting up the right SDK. Also included is 'glass.png'. This is the app icon. 
+Before you execute your code, there is one last thing that you need to do,
+	1. add the following user permissions-
+ 		<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+   		<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    		<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+      2. In 'build.gradle (:app)', make sure to have the compileSdk-33, minSdk- 27 and targetSdk- 33.
+      
+Thats it! You can make your own modifications to the code if you want. There are several methods to perform this activity.
 
 
 
