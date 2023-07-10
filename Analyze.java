@@ -27,7 +27,7 @@ import java.util.List;
 
 public class Analyze extends AppCompatActivity {
     public static final String TAG = "Analyze";
-    Button buttonSave;
+    Button buttonSave, buttonClear;
     private ArrayAdapter<String> adapter;
     private Handler handler;
     private long previousRxBytes;
@@ -41,8 +41,10 @@ public class Analyze extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_analyze);
         ListView packetListView = findViewById(R.id.packetListView);
+        buttonClear = findViewById(R.id.buttonClear);
         buttonSave = findViewById(R.id.buttonSave);
         buttonSave.setOnClickListener(view -> startCapture());
+        buttonClear.setOnClickListener(view -> clearData());
         packetList = new ArrayList<>();
         adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, packetList);
         packetListView.setAdapter(adapter);
@@ -115,6 +117,11 @@ public class Analyze extends AppCompatActivity {
         } catch(IOException e) {
             e.printStackTrace();
         }
+    }
+
+    private void clearData(){
+        packetList.clear();
+        adapter.notifyDataSetChanged();
     }
 
     protected void onDestroy() {
