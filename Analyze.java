@@ -95,6 +95,7 @@ public class Analyze extends AppCompatActivity {
         if(!directory.exists()){
             directory.mkdirs();
             if(!directory.mkdir()){
+                Log.e(TAG,"Failed to create directory");
                 //If creation of directory is failed, user shown the error!
                 Toast.makeText(getApplicationContext(), "Save Failed",Toast.LENGTH_SHORT).show();
             }
