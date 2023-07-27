@@ -6,6 +6,7 @@ import android.os.Environment;
 import android.os.Handler;
 import android.os.Looper;
 import android.util.Log;
+import android.view.Window;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
@@ -23,8 +24,6 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
-
-
 public class Analyze extends AppCompatActivity {
     public static final String TAG = "Analyze";
     Button buttonSave, buttonClear;
@@ -33,7 +32,6 @@ public class Analyze extends AppCompatActivity {
     private long previousRxBytes;
     private long previousTxBytes;
     private List<String> packetList;
-    //private Runnable saveRunnable;
 
 
     @Override
@@ -50,8 +48,10 @@ public class Analyze extends AppCompatActivity {
         packetListView.setAdapter(adapter);
         handler = new Handler(Looper.getMainLooper());
         startCapture();
-    }
 
+        Window window=this.getWindow();
+        window.setStatusBarColor(this.getResources().getColor(R.color.bluish_white));
+    }
 
     private void startCapture(){
         previousRxBytes = TrafficStats.getTotalRxBytes();
@@ -75,20 +75,11 @@ public class Analyze extends AppCompatActivity {
                 packetList.add(packetInfo);
                 handler = new Handler();
                 saveToFile();
-//                saveRunnable = new Runnable() {
-//                    @Override
-//                    public void run() {
-//                        handler.postDelayed(this, INTERVAL);
-//                    }
-//                };
-//                handler.postDelayed(saveRunnable, INTERVAL);
-                //new ends
-
                 adapter.notifyDataSetChanged();
                 // Schedule the next capture after this interval
-                handler.postDelayed(this, 3000);
+                handler.postDelayed(this, 1000);
             }
-        }, 3000);
+        }, 1000);
     }
 
     private void saveToFile() {
@@ -97,8 +88,8 @@ public class Analyze extends AppCompatActivity {
         if(!directory.exists()){
             directory.mkdirs();
             if(!directory.mkdir()){
-                Log.e(TAG,"Failed to create directory");
                 //If creation of directory is failed, user shown the error!
+                Log.e(TAG,"Failed to create directory");
                 Toast.makeText(getApplicationContext(), "Save Failed",Toast.LENGTH_SHORT).show();
             }
         }
