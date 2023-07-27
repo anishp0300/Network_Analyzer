@@ -4,30 +4,48 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/blue"
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/networkUsageTextView"
-        android:layout_width="378dp"
-        android:layout_height="22dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="23dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="562dp"
-        android:text="Keep a track of your received and transmitted data in a file" />
-
-    <Button
-        android:id="@+id/Check_Button"
-        android:layout_width="wrap_content"
+        android:id="@+id/datetime"
+        android:layout_width="176dp"
         android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginTop="400dp"
-        android:layout_marginEnd="125dp"
-        android:layout_marginBottom="393dp"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="19dp"
+        android:layout_marginEnd="222dp"
+        android:layout_marginBottom="693dp" />
+
+    <TextView
+        android:id="@+id/ssidTextView"
+        android:layout_width="211dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="185dp"
+        android:layout_marginEnd="98dp"
+        android:layout_marginBottom="533dp"
+        android:textAppearance="?android:textAppearanceMedium" />
+
+    <Button
+        android:id="@+id/Check_Button"
+        android:layout_width="146dp"
+        android:layout_height="65dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="132dp"
+        android:layout_marginTop="391dp"
+        android:layout_marginEnd="133dp"
+        android:layout_marginBottom="390dp"
         android:text="Check Net Status" />
 
     <Button
@@ -37,11 +55,34 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="144dp"
-        android:layout_marginEnd="139dp"
+        android:layout_marginStart="132dp"
+        android:layout_marginEnd="133dp"
         android:layout_marginBottom="267dp"
         android:text="Analyze Network" />
 
+    <ImageView
+        android:id="@+id/sigma"
+        android:layout_width="wrap_content"
+        android:layout_height="47dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="93dp"
+        android:layout_marginTop="696dp"
+        android:layout_marginEnd="222dp"
+        android:layout_marginBottom="-13dp"
+        android:src="@drawable/sigma" />
+
+    <ImageView
+        android:id="@+id/linkedin"
+        android:layout_width="62dp"
+        android:layout_height="52dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="126dp"
+        android:layout_marginBottom="44dp"
+        app:srcCompat="@drawable/linkedin" />
 
 
 </RelativeLayout>
