@@ -1,4 +1,4 @@
-# Network_Analyzer
+# Network Analyzer
 *******************************************************************
 Network Analyzer using Java
 Developed by- Anish Puranik @Sigma Connectivity, Carlsbad, CA
