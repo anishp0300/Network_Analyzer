@@ -1,12 +1,12 @@
 # Network Analyzer
 *******************************************************************
 Network Analyzer using Java
-Developed by- Anish Puranik @Sigma Connectivity, Carlsbad, CA
-Developed in VSCode and Android Studio
-OS used- Ubuntu 18.04.6 LTS
-	 Processor- Intel® Xeon(R) Silver 4114 CPU @ 2.20GHz × 20
-AOSP build- aosp_barbet-userdebug (Android 11)
-Phone- Pixel 5a (5G)
+<p>Developed by- Anish Puranik @Sigma Connectivity, Carlsbad, CA </p>
+<p>Developed in VSCode and Android Studio </p>
+<p>OS used- Ubuntu 18.04.6 LTS</p>
+<p>Processor- Intel® Xeon(R) Silver 4114 CPU @ 2.20GHz × 20 </p>
+<p>AOSP build- RD2A.211001.002 (aosp_barbet-userdebug (Android 11)) </p>
+<p>Phone- Pixel 5a (5G) </p>
 *******************************************************************
 
 README
